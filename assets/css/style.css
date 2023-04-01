@@ -801,6 +801,28 @@ animation: line 15s linear infinite;
     transform: perspective(580px);
 }
 
+
+  
+  #perspective {
+    perspective: 1000px;
+    /* center object */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #join {
+    transition: 300ms ease-out;
+    /* optional */
+    background: #bbb;
+    padding: 20px;
+    /* example content */
+    font: bold 20vw sans-serif;
+    width: 80%;
+  }
+
+
+
 /*FOOTER*/
 
 footer{

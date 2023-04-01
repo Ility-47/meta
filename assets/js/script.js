@@ -169,7 +169,7 @@ for (i = 0; i < acc.length; i++) {
 }
 
 /*deviation*/
-const join = document.getElementById('join');
+/* const join = document.getElementById('join');
 const elWidth = join.offsetWidth / 2;
 const elHeight = join.offsetHeight / 2;
 let rotateY  = 0;
@@ -205,7 +205,8 @@ function rotX(){
 }
 function rotY(){
   join.style.transform = rotateY;
-}
+} */
+
 
 /*preloader*/
 
@@ -214,3 +215,29 @@ window.onload = function (){
   preloader.style.display = 'none';
   document.body.style.overflowY = 'scroll';
 }
+
+/*card animation*/
+
+document.getElementById('perspective').addEventListener('mousemove', function(e) {
+  const join = document.getElementById('join');
+  let wd = '100%';
+  var w = window.innerWidth / 2;
+  var h = window.innerHeight / 2;
+  var x = (e.pageX - w) / 10; 
+  var y = (e.pageY - h) / 10;
+  console.log(y);
+  if(x < 3){
+    x = 750;
+    //y = 0; 
+    wd = '80%';
+  } 
+  if(x > 63){
+    x = 0;
+   // y = 40;
+   wd = '80%';
+  }
+  
+  join.style.transform = 'rotateX(' + y + 'deg) rotateY(' + x + 'deg)';
+  join.style.width = wd; 
+   
+});
